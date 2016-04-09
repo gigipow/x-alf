@@ -1,0 +1,98 @@
+
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700|Bree+Serif' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="http://jpp.no-ip.org/semantic/packaged/css/semantic.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+
+
+
+
+  <script src="http://jpp.no-ip.org/semantic/packaged/jsvascript/semantic.js"></script>
+
+    <style type="text/css">
+    html { 
+      background: url(http://jpp.no-ip.org/steven.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+      #alf {
+    color: pink;
+    text-align: right;
+    font-family: 'Bree Serif', cursive;
+    font-size:8px;}
+
+    </style>
+</head>
+
+
+<div id="alf"> ALF Wu's Gift 2014 (version: 1.0) </div>
+
+
+
+<div class="ui green inverted menu">
+  <a class="active item" id = "ho">
+    <i class="home icon"></i> All my fav
+  </a>
+  <a class="item" id = "bs">
+    <i class="heart icon"></i> Buy Signals
+    <!--div class="floating ui red label">?</div-->
+  </a>
+  <a class="item" id = "ss">
+    <i class="thumbs down icon"></i> Sell Signals
+     <!--div class="floating ui teal label" id = "ssNum">?</div-->
+  </a>
+  <div class="right menu">
+    <div class="item">
+      <div class="ui icon input">
+        <input type="text" placeholder="Search..." id="query">
+        <i class="search link icon" id = "se"></i>
+      </div>
+    </div>
+    <div class="ui dropdown item" id = "co">
+      <i class="setting icon"></i>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+$( "#ho" ).click(function() {
+    $("#alf_frame").attr("src", "http://jpp.no-ip.org:5000/host") ;
+});
+
+$( "#bs" ).click(function() {
+  $("#alf_frame").attr("src", "http://jpp.no-ip.org:5000/buy") ;
+});
+
+$( "#ss" ).click(function() {
+  $("#alf_frame").attr("src", "http://jpp.no-ip.org:5000/sell");
+});
+
+$( "#se" ).click(function() {
+  
+  $("#alf_frame").attr("src", "http://jpp.no-ip.org:5000/stock/" + $('#query').val());
+  
+});
+
+$( "#co" ).click(function() {
+  alert( "Handler for co" );
+});
+</script>
+
+<iframe id="alf_frame" src="http://jpp.no-ip.org:5000/help"frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
+
+
+<div class='widget-content'>
+<script type="text/javascript" src="http://js1.bloggerads.net/showbanner.aspx?blogid=20140619000022&amp;charset=utf-8"></script>
+</div>
+
+
+</body>
+</html>

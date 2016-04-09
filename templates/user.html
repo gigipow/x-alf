@@ -1,0 +1,11 @@
+
+
+  {% block body %}
+
+  {% for user in users %}
+  
+    <li><h2>{{ user[0] }}</h2>{{ user[1] }}
+
+  {% endfor %}
+
+  {% endblock %}

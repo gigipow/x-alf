@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+<link href='http://fonts.googleapis.com/css?family=Lobster|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="http://jpp.no-ip.org/semantic/packaged/css/semantic.css">
+<script src="http://jpp.no-ip.org/semantic/packaged/jsvascript/semantic.js"></script>
+</head>
+
+
+<body>
+	{% block body %}
+
+
+<table class="ui collapsing table segment">
+  <thead>
+    <tr><th>Name</th>
+    <th>StockID</th>
+
+  </tr></thead>
+  <tbody>
+  	{% for s in stocks %}
+    <tr>
+      <td>{{s['date']}}</td>
+      <td>{{s['stock']}}</td>
+
+    </tr>
+    {% endfor %}
+
+  </tbody>
+
+</table>
+
+ {% endblock %}
+ 
+</body>
+
+</html>
